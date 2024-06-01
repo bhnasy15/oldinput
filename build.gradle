@@ -8,11 +8,15 @@ plugins {
 group = project.maven_group
 version = "${project.mod_version}+${project.minecraft_version}"
 
-sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+base {
+    archivesName = 'oldinput'
+}
 
 java {
-    archivesBaseName = 'oldinput'
     toolchain.languageVersion = JavaLanguageVersion.of(8)
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 loom {
